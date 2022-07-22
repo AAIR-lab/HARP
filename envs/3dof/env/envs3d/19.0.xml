@@ -1,0 +1,58 @@
+<Environment>
+	<camtrans>0.980986 -1.233453 2.412977</camtrans>
+
+	<camrotationaxis>-0.946522 -0.231893 0.224324 122.297980</camrotationaxis>
+
+	
+	<Robot file="robots/robot2.xml" name="bot">
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>1.5 -1.5 0</jointvalues>
+	</Robot>
+
+	<!-- <Robot file = 'robots/lshaped.xml' name = 'lshaped'>
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>0 0 0 0 0</jointvalues>
+	</Robot> -->
+
+	<KinBody name="floorwalls">
+		<Body type="static">
+			<Translation>0 0 0</Translation>
+
+			
+			<Geom type="box">
+			<extents>2.5 2.5 0.005</extents>
+			<translation>0 0 -0.005</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 -2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>-2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+		<Geom type="box"><translation>0.0 -1.5000000000000002 0.1025</translation><extents>0.125 0.9999999999999998 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.4000000000000046 0.0 0.1025</translation><extents>1.15 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom></Body>
+	</KinBody>
+</Environment>

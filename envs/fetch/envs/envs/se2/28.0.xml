@@ -1,0 +1,58 @@
+<Environment>
+	<camtrans>0.980986 -1.233453 2.412977</camtrans>
+
+	<camrotationaxis>-0.946522 -0.231893 0.224324 122.297980</camrotationaxis>
+
+	
+	<!-- <Robot file="robots/robot2.xml" name="bot">
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>1.8 -1.5 0</jointvalues>
+	</Robot> -->
+
+	<Robot file = 'robots/lshaped.xml' name = 'lshaped'>
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>0 0 0 0 0</jointvalues>
+	</Robot>
+
+	<KinBody name="floorwalls">
+		<Body type="static">
+			<Translation>0 0 0</Translation>
+
+			
+			<Geom type="box">
+			<extents>2.5 2.5 0.005</extents>
+			<translation>0 0 -0.005</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 -2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>-2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+		<Geom type="box"><translation>-1.0639919042587285 -0.9604430198669438 0.10249999910593033</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.9 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-0.3901806473731997 1.5474586486816415 0.10246474295854568</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.95 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-1.3856934309005737 0.03347897529602051 0.10249999910593033</translation><rotationMat>1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0</rotationMat><extents>1.125 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.2136296033859257 1.5518995523452768 0.10245717316865921</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.95 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.8695511817932138 1.047263622283936 0.10246578603982925</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.95 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.5534185171127319 0.038280338048934937 0.10248256474733353</translation><rotationMat>1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0</rotationMat><extents>1.45 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.3636223077774048 1.1020150184631348 0.10245902091264725</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.95 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.4236772060394292 -0.8077803850173955 0.10250572115182877</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.8 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.20245134830474865 -1.6018695831298837 0.10249999910593033</translation><rotationMat>0.0 -1.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.9 0.125 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom></Body>
+	</KinBody>
+</Environment>

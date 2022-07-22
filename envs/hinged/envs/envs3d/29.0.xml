@@ -1,0 +1,58 @@
+<Environment>
+	<camtrans>0.980986 -1.233453 2.412977</camtrans>
+
+	<camrotationaxis>-0.946522 -0.231893 0.224324 122.297980</camrotationaxis>
+
+	
+	<!-- <Robot file="robots/robot2.xml" name="bot">
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>1.5 -1.5 0</jointvalues>
+	</Robot> -->
+
+	<Robot file = 'robots/lshaped.xml' name = 'lshaped'>
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>0 0 0 0 0</jointvalues>
+	</Robot>
+
+	<KinBody name="floorwalls">
+		<Body type="static">
+			<Translation>0 0 0</Translation>
+
+			
+			<Geom type="box">
+			<extents>2.5 2.5 0.005</extents>
+			<translation>0 0 -0.005</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 -2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>2.5 0.01 0.2</extents>
+			<translation>0 2.5 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type="box">
+			<extents>0.01 2.5 0.2</extents>
+			<translation>-2.5 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+		<Geom type="box"><translation>0.0 0.0 0.1025</translation><rotationMat>0.9671726970139708 -0.2541199995095268 0.0 0.2541199995095268 0.9671726970139708 0.0 0.0 0.0 1.0</rotationMat><extents>0.325 0.25 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.0 0.0 0.1025</translation><rotationMat>-0.4885931104212935 -0.8725117606364088 0.0 0.8725117606364088 -0.4885931104212935 0.0 0.0 0.0 1.0</rotationMat><extents>0.575 0.375 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-1.3103216886520386 1.5219852924346924 0.10249999910593033</translation><rotationMat>0.842754558582545 -0.5382980159617345 0.0 0.5382980159617345 0.842754558582545 0.0 0.0 0.0 1.0</rotationMat><extents>0.25 0.25 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-0.34270933270454385 1.6580892801284792 0.10249999910593033</translation><rotationMat>0.7841146379134576 -0.6206160122087145 0.0 0.6206160122087145 0.7841146379134576 0.0 0.0 0.0 1.0</rotationMat><extents>0.175 0.175 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.168967127799988 1.2863428592681883 0.1024964228272438</translation><rotationMat>-0.8526580251751155 0.5224694173867717 0.0 -0.5224694173867717 -0.8526580251751155 0.0 0.0 0.0 1.0</rotationMat><extents>0.675 0.675 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.0 0.0 0.1025</translation><rotationMat>0.9306512065705121 -0.3659075453018835 0.0 0.3659075453018835 0.9306512065705121 0.0 0.0 0.0 1.0</rotationMat><extents>0.575 0.375 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.0 0.0 0.1025</translation><rotationMat>0.4184259788348853 -0.9082509015883595 0.0 0.9082509015883595 0.4184259788348853 0.0 0.0 0.0 1.0</rotationMat><extents>0.375 0.375 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-1.72746467590332 0.19332388043403692 0.10249420255422592</translation><rotationMat>0.33668807878454865 -0.9416162369056567 0.0 0.9416162369056567 0.33668807878454865 0.0 0.0 0.0 1.0</rotationMat><extents>0.275 0.275 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>1.641191005706787 -0.42221906781196594 0.10251212865114212</translation><rotationMat>1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0</rotationMat><extents>0.425 0.275 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>-0.8838570713996883 -1.365618705749511 0.1024954542517662</translation><rotationMat>-0.6537579579763517 -0.7567037282732194 0.0 0.7567037282732194 -0.6537579579763517 0.0 0.0 0.0 1.0</rotationMat><extents>0.775 0.275 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom><Geom type="box"><translation>0.7902276515960688 -1.6651821136474607 0.10252129286527634</translation><rotationMat>-0.48185196052252 -0.8762526394485807 0.0 0.8762526394485807 -0.48185196052252 0.0 0.0 0.0 1.0</rotationMat><extents>0.425 0.275 0.205</extents><diffuseColor>1.75 1.75 1.75</diffuseColor><ambientColor>0.6 0.6 0.6</ambientColor></Geom></Body>
+	</KinBody>
+</Environment>

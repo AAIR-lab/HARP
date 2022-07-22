@@ -1,0 +1,795 @@
+<Environment>
+	<camtrans>0.980986 -1.233453 2.412977</camtrans>
+
+	<camrotationaxis>-0.946522 -0.231893 0.224324 122.297980</camrotationaxis>
+
+	<!-- <Robot file="robots/robot2.xml" name="bot">
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>1.5 -1.5 0</jointvalues>
+	</Robot> -->
+	
+	<Robot file = 'robots/lshaped.xml' name = 'lshaped'>
+		<Translation>0 0 -0.30128</Translation>
+		<jointvalues>0 0 0 0 0</jointvalues>
+	</Robot>
+	
+	<KinBody name = 'floorwalls'>
+		<Body type = 'static'>
+			<Translation>0 0 0</Translation>
+
+			<!-- floor and world walls -->
+			<Geom type = 'box'>
+			<extents>10 10 0.005</extents>
+			<translation>0 0 -0.005</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>10 0.01 0.2</extents>
+			<translation>0 -10 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type='box'>
+			<extents>10 0.01 0.2</extents>
+			<translation>0 10 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.01 10 0.2</extents>
+			<translation>10 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.01 10 0.2</extents>
+			<translation>-10 0 0.2</translation>
+			<diffuseColor>1.75 1.75 1.75</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<!-- top right room -->
+			<Geom type = 'box'>
+			<extents>0.2 4.75 0.2</extents>
+			<translation>2 5.25 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>1.75 0.2 0.2</extents>
+			<translation>3.5 0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>1.75 0.2 0.2</extents>
+			<translation>8.25 0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+				<!-- left room -->
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 6.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 5.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 3.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.2 0.2</extents>
+				<translation>3.6 9.8 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 6.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 5.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 3.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 2.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 0.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<!-- right room -->
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 6.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 5.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 3.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 2.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.2 0.2</extents>
+				<translation>8.5 9.8 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 6.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 5.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 3.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 2.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 0.9 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+			<!-- bottom right room -->
+			<Geom type = 'box'>
+			<extents>0.2 4.75 0.2</extents>
+			<translation>2 -5.25 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>1.75 0.2 0.2</extents>
+			<translation>3.5 -0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>1.75 0.2 0.2</extents>
+			<translation>8.25 -0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+				<!-- left room -->
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 -4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 -5.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 -7 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>2.75 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -1 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -5.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -7 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>3.6 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.2 0.2</extents>
+				<translation>3.6 -9.8 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<!-- right room -->
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -1 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -5.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -7 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.4 0.2</extents>
+				<translation>8.5 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.2 0.2</extents>
+				<translation>8.5 -9.8 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 -4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 -5.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 -7 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.75 0.1 0.2</extents>
+				<translation>9.25 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+
+			<!-- top left room -->
+			<Geom type = 'box'>
+			<extents>4 0.2 0.2</extents>
+			<translation>-2 0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.2 1.5 0.2</extents>
+			<translation>-5.8 2.4 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.75 0.2 0.2</extents>
+			<translation>-9.25 4 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.75 0.2 0.2</extents>
+			<translation>-6.35 4 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+				<!-- top inner rooms -->
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-8.5 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-7 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-5.5 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-4 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-2.5 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-1 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>0.5 9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.2 0.1 0.2</extents>
+				<translation>-9.8 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-8.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-7 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-5.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-4 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-2.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-1 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>0.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>1 0.1 0.2</extents>
+				<translation>2.5 8.4 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<!-- bottom inner room -->
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>0.5 1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-1 1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-2.5 1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-4 1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>1 0.1 0.2</extents>
+				<translation>2.5 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>0.5 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-1 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-2.5 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-4 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-5.5 2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+			<!-- bottom middle room -->
+			<Geom type = 'box'>
+			<extents>2.75 0.2 0.2</extents>
+			<translation>-1 -0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.2 4.75 0.2</extents>
+			<translation>-5.8 -5.25 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+			<Geom type = 'box'>
+			<extents>0.5 0.2 0.2</extents>
+			<translation>-5.5 -0.7 0.2</translation>
+			<diffuseColor>1 0 0</diffuseColor>
+		  	<ambientColor>0.6 0.6 0.6</ambientColor>
+			</Geom>
+
+				<!-- top rooms -->
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>0.5 -1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-1 -1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-2.5 -1.65 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>2 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>0.5 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-1 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.2 0.1 0.2</extents>
+				<translation>-2.4 -2.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<!-- bottom rooms -->
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>0.5 -9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-1 -9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-2.5 -9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.1 0.75 0.2</extents>
+				<translation>-4 -9.25 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>2 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>0.5 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-1 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-2.5 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-4 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+
+				<Geom type = 'box'>
+				<extents>0.4 0.1 0.2</extents>
+				<translation>-5.5 -8.5 0.2</translation>
+				<diffuseColor>1 0 0</diffuseColor>
+			  	<ambientColor>0.6 0.6 0.6</ambientColor>
+				</Geom>
+		</Body>
+	</KinBody>
+</Environment>
+
+
+
+
+
+
+
+
+
+
+

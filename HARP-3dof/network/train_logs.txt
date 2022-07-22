@@ -1,0 +1,3 @@
+Total parameters: 33760605
+No checkpoint file found. Initializing...
+Training completed in 66.7467260945hrs 4004.80356567mins

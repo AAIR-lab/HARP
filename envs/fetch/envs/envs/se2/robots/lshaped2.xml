@@ -1,0 +1,80 @@
+<!-- L shaped with a hinge (4 DOF) -->
+<Robot name="lshaped">
+    <KinBody>
+
+        <Body name='basehor' type='dynamic'>
+		</Body>
+
+		<Body name='basevert' type='dynamic'>
+			<offsetfrom>basehor</offsetfrom>
+			<Translation>0 0 0</Translation>
+			
+		</Body>
+
+		<Body name='baserot' type='dynamic'>
+			<offsetfrom>basevert</offsetfrom>
+			<Translation>0 0 0</Translation>
+		</Body>
+        
+		<Joint name="hor" type="slider"> 
+		    <Body>basehor</Body>
+		    <Body>basevert</Body>
+		    <offsetfrom>basevert</offsetfrom>
+		    <axis>1 0 0</axis>
+	    </Joint>
+
+        <Joint name="vert" type="slider"> 
+		    <Body>basevert</Body>
+		    <Body>baserot</Body>
+		    <offsetfrom>baserot</offsetfrom>
+		    <axis>0 1 0</axis>
+	    </Joint>
+
+        <Body name="Base" type="dynamic">
+            <offsetfrom>baserot</offsetfrom>
+            <Translation>0.0  0.0  0.0</Translation>
+            <Geom type="box">
+                <Translation>0 0 0</Translation>
+                <Extents>0.3 0.1 0.05</Extents>
+                <diffuseColor>3.75 3.75 3.75</diffuseColor>
+		  	    <ambientColor>1.6 0.6 0.6</ambientColor>
+            </Geom>
+        </Body>
+
+        <Joint name="rot" circular="true" type="hinge"> 
+		    <Body>baserot</Body>
+		    <Body>Base</Body>
+		    <offsetfrom>Base</offsetfrom>
+		    <axis>0 0 1</axis>
+		    <limitsdeg>-3.14 3.14</limitsdeg>
+	    </Joint>
+        
+        <Body name="Mid" type="dynamic">
+            <Translation>0.2  0.0  0.0</Translation>
+        </Body>
+
+        <Joint name="MidArm" type="hinge">
+            <Body>Base</Body>
+            <Body>Mid</Body>
+            <limitsdeg>0 0</limitsdeg>
+        </Joint>
+        
+        <Body name="Arm0" type="dynamic">
+            <offsetfrom>Mid</offsetfrom>
+            <Translation>0 0 0</Translation>
+            <Geom type="box">
+                <Translation>0.2 0 0</Translation>
+                <Extents>0.3 0.1 0.05</Extents>
+            </Geom>
+        </Body>
+        <Joint name="Arm0" type="hinge">
+            <Body>Mid</Body>
+            <Body>Arm0</Body>
+            <offsetfrom>Arm0</offsetfrom>
+            <axis>0 0 1</axis>
+            <maxvel>0.5</maxvel>
+            <resolution>1</resolution>
+        </Joint>
+        <transparency>0.1</transparency>
+    </KinBody>
+</Robot>

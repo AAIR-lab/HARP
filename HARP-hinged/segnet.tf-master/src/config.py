@@ -1,0 +1,10 @@
+model = 'unet'  # which model to use. load in utils.py
+working_dataset = 'waypoint-3d'  # dataset name in input/ folder 
+input_channels = 7  # number of channels in input tensor
+output_channels = 20  # number of channels in output tensor from network (1 + 9 + 10)
+dof1_bins = 9
+dof2_bins = 10
+label_channels = 3 # number of channels in label tensors
+num_dof = 4  # number of dof in the robot (goal condition values)
+gpu_memory_fraction = 0.1
+strided = False

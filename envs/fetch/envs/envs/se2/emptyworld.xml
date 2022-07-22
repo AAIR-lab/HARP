@@ -1,0 +1,8 @@
+<Environment>
+	
+	<Robot file = 'robots/robot4.xml' name = 'bot'>
+		<Translation>0 0 0</Translation>
+		<jointvalues>0 0 0</jointvalues>
+	</Robot>
+
+</Environment>
