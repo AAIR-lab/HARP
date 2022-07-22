@@ -1,4 +1,9 @@
-Envs, Model, and data are available to download from the conference chairs. 
+
+Code for the paper: "Using Deep Learning to Boostrap Abstractions for Hierarchical Robot Planning" 
+https://arxiv.org/pdf/2202.00907.pdf
+Published: AAMAS, 2022.
+
+Leaned models and training data can be downloaded from here. 
 
 Dependencies: 
 python2 
